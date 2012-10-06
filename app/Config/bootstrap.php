@@ -181,5 +181,5 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-require_once(getenv('APPLICATION_ENVIRONMENT').'.config.php');
+
 require_once('functions.php');
