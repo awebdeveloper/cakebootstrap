@@ -43,5 +43,8 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 # cakephp
-tmp/*
+*/tmp/cache/*
+*/tmp/logs/*
+*/tmp/sessions/*
+*/tmp/tests/*
 *.config.php
