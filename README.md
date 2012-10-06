@@ -1,7 +1,21 @@
-cakebootstrap
+CakeBootstrap
 =============
 
 Cakephp starter project 
+
+### Install
+
+0. Grab a copy of CakeBootstrap and copy it into your document root.
+
+1. Open the `.htacess` file, cut ```SetEnv APPLICATION_ENVIRONMENT webdevunix``` and paste into your apache config. You can keep it as it is if you dont have access to apache config but it recommended you do it.
+
+2. Rename `webdevunix` to your APPLICATION_ENVIRONMENT name. It can be any name but should be without any space or special characters. 
+
+3. Rename `config.php.default` to `APPLICATION_ENVIRONMENT.config.php`. 
+
+4. Edit this file with your details and you are done.
+
+5. Run: http://localhost/cakebootstrap/
 
 
 ## License
