@@ -1,7 +1,9 @@
 CakeBootstrap
 =============
 
-Cakephp starter project 
+Cakephp starter project.
+
+***Warning : This product is not yet ready ***
 
 ### Install
 
