@@ -1,0 +1,22 @@
+body {
+  padding-top: 70px;
+}
+
+th a {
+	display: block;
+}
+th a.asc:after,th a.desc:after {
+	float: right;
+	color:black;
+}
+
+th a.asc:after {
+	content: ' ⇣';
+}
+th a.desc:after {
+	content: ' ⇡';
+}
+
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+	background-color: #f2f2f2;
+}
