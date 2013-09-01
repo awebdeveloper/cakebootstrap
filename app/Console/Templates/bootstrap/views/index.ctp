@@ -71,9 +71,9 @@
 
 	<ul class="pagination"><?php
 			echo "\n\t<?php\n";
-			echo "\t\techo \$this->Paginator->prev('< ' . __('previous'),  array('tag' => 'li'), null, array('class' => 'prev disabled','disabledTag'=>'a'));\n";
-			echo "\t\techo \$this->Paginator->numbers(array('separator' => '','tag' => 'li','currentTag'=>'a'));\n";
-			echo "\t\techo \$this->Paginator->next(__('next') . ' >', array('tag' => 'li'), null, array('class' => 'next disabled','tag' => 'li'));\n";
+			echo "\t\techo \$this->Paginator->prev('« ' . __('Prev'),  array('tag' => 'li'), null, array('class' => 'prev disabled','tag' => 'li','disabledTag'=>'a'));\n";
+			echo "\t\techo \$this->Paginator->numbers(array('separator' => '','tag' => 'li','currentTag'=>'a','currentClass'=>'active'));\n";
+			echo "\t\techo \$this->Paginator->next(__('Next') . ' »', array('tag' => 'li'), null, array('class' => 'next disabled','tag' => 'li','disabledTag'=>'a'));\n";
 			echo "\t?>\n";
 		?>
 	</ul>
@@ -81,13 +81,13 @@
 
 
 <?php echo '<?php $this->start(\'actions\'); ?>'."\n"; ?>
-	<li><?php echo "<?php echo \$this->Html->link(__('New " . $singularHumanName . "'), array('action' => 'add')); ?>"; ?></li><?php
+<li><?php echo "<?php echo \$this->Html->link(__('New " . $singularHumanName . "'), array('action' => 'add')); ?>"; ?></li><?php
 	$done = array();
 	foreach ($associations as $type => $data) {
 		foreach ($data as $alias => $details) {
 			if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
-				echo "\t<li><?php echo \$this->Html->link(__('List " . Inflector::humanize($details['controller']) . "'), array('controller' => '{$details['controller']}', 'action' => 'index')); ?> </li>\n";
-				echo "\t<li><?php echo \$this->Html->link(__('New " . Inflector::humanize(Inflector::underscore($alias)) . "'), array('controller' => '{$details['controller']}', 'action' => 'add')); ?> </li>\n";
+				echo "<li><?php echo \$this->Html->link(__('List " . Inflector::humanize($details['controller']) . "'), array('controller' => '{$details['controller']}', 'action' => 'index')); ?> </li>\n";
+				echo "<li><?php echo \$this->Html->link(__('New " . Inflector::humanize(Inflector::underscore($alias)) . "'), array('controller' => '{$details['controller']}', 'action' => 'add')); ?> </li>\n";
 				$done[] = $details['controller'];
 			}
 		}

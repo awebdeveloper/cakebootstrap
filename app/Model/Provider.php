@@ -43,7 +43,7 @@ class Provider extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	public $hasOne = array(
 		'Share' => array(
 			'className' => 'Share',
 			'foreignKey' => 'provider_id',
@@ -57,6 +57,14 @@ class Provider extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
+	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
 		'SocialDetail' => array(
 			'className' => 'SocialDetail',
 			'foreignKey' => 'provider_id',

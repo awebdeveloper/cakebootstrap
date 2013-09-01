@@ -41,17 +41,17 @@
 
 	<ul class="pagination">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'),  array('tag' => 'li'), null, array('class' => 'prev disabled','disabledTag'=>'a'));
-		echo $this->Paginator->numbers(array('separator' => '','tag' => 'li','currentTag'=>'a'));
-		echo $this->Paginator->next(__('next') . ' >', array('tag' => 'li'), null, array('class' => 'next disabled','tag' => 'li'));
+		echo $this->Paginator->prev('« ' . __('Prev'),  array('tag' => 'li'), null, array('class' => 'prev disabled','tag' => 'li','disabledTag'=>'a'));
+		echo $this->Paginator->numbers(array('separator' => '','tag' => 'li','currentTag'=>'a','currentClass'=>'active'));
+		echo $this->Paginator->next(__('Next') . ' »', array('tag' => 'li'), null, array('class' => 'next disabled','tag' => 'li','disabledTag'=>'a'));
 	?>
 	</ul>
 </div>
 
 
 <?php $this->start('actions'); ?>
-	<li><?php echo $this->Html->link(__('New Provider'), array('action' => 'add')); ?></li>	<li><?php echo $this->Html->link(__('List Shares'), array('controller' => 'shares', 'action' => 'index')); ?> </li>
-	<li><?php echo $this->Html->link(__('New Share'), array('controller' => 'shares', 'action' => 'add')); ?> </li>
-	<li><?php echo $this->Html->link(__('List Social Details'), array('controller' => 'social_details', 'action' => 'index')); ?> </li>
-	<li><?php echo $this->Html->link(__('New Social Detail'), array('controller' => 'social_details', 'action' => 'add')); ?> </li>
+<li><?php echo $this->Html->link(__('New Provider'), array('action' => 'add')); ?></li><li><?php echo $this->Html->link(__('List Shares'), array('controller' => 'shares', 'action' => 'index')); ?> </li>
+<li><?php echo $this->Html->link(__('New Share'), array('controller' => 'shares', 'action' => 'add')); ?> </li>
+<li><?php echo $this->Html->link(__('List Social Details'), array('controller' => 'social_details', 'action' => 'index')); ?> </li>
+<li><?php echo $this->Html->link(__('New Social Detail'), array('controller' => 'social_details', 'action' => 'add')); ?> </li>
 <?php $this->end('actions'); ?>
